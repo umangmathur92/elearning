@@ -1,0 +1,84 @@
+<style>
+    .container{
+        width:100%;
+        background-color:#000000;
+        height:auto;
+    }
+
+    .left_div{
+        width:150px;
+        float:left;
+        padding-left: 10px;
+
+        position:fixed ;
+        height: 200px;
+
+        font-weight:bold;
+        background-color: #Fff;
+        color: #000;
+        text-align: center;
+
+
+
+    }
+    .title{
+        width: 150px;
+        background-color: #005B9A;
+        height: 40px;
+        line-height:40px;
+        color: #fff;
+        font-size: 20px;
+        padding: 5px;
+        border-top-left-radius: 25px;
+
+        border-top-right-radius: 25px;
+        text-transform: uppercase;
+        font-weight:bold;
+        vertical-align:middle;
+
+
+    }
+
+
+
+    .inner_right{
+        float:left;
+        height:1000px;
+        width:78%;
+    }
+
+    .btn{
+        position: relative;
+
+        bottom:   5px;
+        top: 80%;
+
+        font-weight:bold;
+
+        width: 98%;
+        <!--
+
+        -->
+        display: inline;
+    }
+</style>
+
+<p id="notice"><%= notice %></p>
+
+<div class="left_div">
+
+  <div class="title"><%= @tut.title %>  </div>
+
+
+  <%= @tut.tut_desc %>       <br><br>
+  <div style="float:left ;">
+  <%= button_to 'Back', tuts_path,  :method => :get  ,:class => 'btn' %> <br>
+ </div>
+  <div style="float:right ;">
+  <%= button_to 'Learn', tuts_path,  :method => :get  ,:class => 'btn' %>
+   </div>
+  <!--
+  <%= link_to 'Edit', edit_tut_path(@tut) %> |
+<%= link_to 'Back', tuts_path %>
+     -->
+</div>
