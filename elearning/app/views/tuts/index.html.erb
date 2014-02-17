@@ -1,0 +1,83 @@
+<script>
+
+</script>
+<body style="background-color:#DDD4BC;">
+<h1 align="center" style="background-color:#005B9A"><font color="#fff">Tutorials</font></h1>
+<br><br>
+<style type="text/css">
+    .span4,.span1,.span3,.span5{
+        height: 250px;
+        width: 250px;
+        border-spacing: 0;
+        padding: 5px;
+        font-weight:bold;
+        background-color: #Fff;
+        color: #000;
+        text-align: center;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 25px;
+        border-radius:25px;
+        position:relative;
+
+
+
+    }
+        .title{
+            background-color: #005B9A;
+            height: 40px;
+            line-height:40px;
+            color: #fff;
+            font-size: 20px;
+            padding: 5px;
+            border-top-left-radius: 25px;
+
+            border-top-right-radius: 25px;
+            text-transform: uppercase;
+            font-weight:bold;
+            vertical-align:middle;
+
+
+        }
+                              .btn{
+                                  position: absolute;
+                                               width: 250px;
+                                  height: 40px;
+                                  bottom:   5px;
+                                  top: 80%;
+
+                                  font-weight:bold;
+                                  display:   inline-block;
+                                  float: none;
+
+
+
+                              }
+
+
+</style>
+<div class="container">
+  <div class="row">
+
+    <% @tuts.each do |tut| %>
+        <div class="span3">
+
+           <div class="title"><%= tut.title %><br></div>
+          <%= tut.tut_desc %>        <br>
+          <%= link_to 'Show', tut %>
+          <%= link_to 'Edit', edit_tut_path(tut) %>
+          <%= link_to 'Destroy', tut, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+          <div style="padding-right: 120px">
+            <%= button_to 'Start Learning', tut,  :method => :get  ,:class => 'btn'  %>
+           </div>
+        </div>
+    <% end %>
+  </div>
+  </div>
+
+
+<br>
+
+<%= link_to 'New Tut', new_tut_path %>
+  </body>
+  <!-- background-image:url('/assets/blacktexture.jpg') ;   -->

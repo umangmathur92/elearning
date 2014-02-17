@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tut_title: MyText
+  tut_desc: MyText
+
+two:
+  tut_title: MyText
+  tut_desc: MyText
